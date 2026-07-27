@@ -2,6 +2,22 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B0000,100:1B5E20&height=220&section=header&text=Data%20Cleanser&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Missing%20Value%20Imputation%20%2B%20Outlier%20Treatment%20on%20Patient%20Health%20Records&descAlignY=58&descSize=18"/>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-1B5E20?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Pandas-8B0000?style=for-the-badge&logo=pandas&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NumPy-1B5E20?style=for-the-badge&logo=numpy&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Scikit--Learn-8B0000?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SciPy-1B5E20?style=for-the-badge&logo=scipy&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Jupyter-8B0000?style=for-the-badge&logo=jupyter&logoColor=white"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Completed-1B5E20?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Records-500-8B0000?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Missing%20Cells%20Fixed-250%20%E2%86%92%200-1B5E20?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Outliers%20Treated-62%20%E2%86%92%200-8B0000?style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-MIT-1B5E20?style=flat-square"/>
+</p>
 
 This project presents a complete **Missing Value Imputation + Outlier Treatment** pipeline on a real-world **Patient Health Records** dataset containing 500 records. The objective is to detect and quantify data quality issues, compare multiple statistical treatment techniques against each other, and produce a fully clean, analysis-ready dataset suitable for disease-risk prediction.
 
@@ -21,22 +37,7 @@ To clean the `patient_health_records_dataset.csv` file by:
 
 ## 🛠️ Tools & Libraries
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-1B5E20?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Pandas-8B0000?style=for-the-badge&logo=pandas&logoColor=white"/>
-  <img src="https://img.shields.io/badge/NumPy-1B5E20?style=for-the-badge&logo=numpy&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Scikit--Learn-8B0000?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SciPy-1B5E20?style=for-the-badge&logo=scipy&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Jupyter-8B0000?style=for-the-badge&logo=jupyter&logoColor=white"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Completed-1B5E20?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Records-500-8B0000?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Missing%20Cells%20Fixed-250%20%E2%86%92%200-1B5E20?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Outliers%20Treated-62%20%E2%86%92%200-8B0000?style=flat-square"/>
-  <img src="https://img.shields.io/badge/License-MIT-1B5E20?style=flat-square"/>
-</p>
+`Python` · `Pandas` · `NumPy` · `Scikit-learn` (`SimpleImputer`, `KNNImputer`, `IterativeImputer`) · `SciPy` (`winsorize`) · `Jupyter Notebook`
 
 ---
 
@@ -110,7 +111,7 @@ Raw Dataset (500 rows × 9 cols, 250 missing cells, 62 outliers)
 ```python
 missing_report = pd.DataFrame({
     "Missing Values": df.isnull().sum(),
-    "Percentage (%)": round((df.isnull().sum() / len(df)) * 100, 2)
+    "Percentage (%)": round(df.isnull().mean() * 100, 2)
 })
 ```
 💡 `bmi` has the highest missing rate (10.2%), followed by `age` (10.0%) and `cholesterol` (8.2%) — no column exceeds ~10%, so imputation (not deletion) is the right call.
@@ -119,13 +120,25 @@ missing_report = pd.DataFrame({
 
 | Technique | Applied To | Result |
 |---|---|---|
-| Simple Imputer — Mean | `bmi` | Mean = 27.09, fills all 51 missing values |
-| Simple Imputer — Median | `bmi` | Median = 26.7, safer choice given mild right skew |
+| Simple Imputer — Mean / Median | `bmi` | Mean = 27.09, Median = 26.7 — median preferred (mild right skew) |
 | Simple Imputer — Mode | `region` | Most frequent = "West", fills all 39 missing values |
 | Simple Imputer — Mode | `gender` | Most frequent = "Male", fills all 31 missing values |
 | Missing Indicator + Random Sample | `cholesterol` | Adds `cholesterol_missing` flag, then random-samples from existing values |
-| KNN Imputer (k=5) | `age`, `bmi`, `blood_pressure`, `cholesterol`, `glucose` | Resolves all 4 target columns together using nearest-neighbor patterns |
+| KNN Imputer (k=5) | `age`, `bmi`, `blood_pressure`, `cholesterol`, `glucose` | Resolves all 5 columns together using nearest-neighbor patterns |
 | MICE (Iterative Imputer) | Same 5 columns | Most statistically robust — models each column as a function of the others |
+
+```python
+mean_df, median_df = df.copy(), df.copy()
+mean_df["bmi"]   = SimpleImputer(strategy="mean").fit_transform(mean_df[["bmi"]])
+median_df["bmi"] = SimpleImputer(strategy="median").fit_transform(median_df[["bmi"]])
+
+region_df["region"] = SimpleImputer(strategy="most_frequent").fit_transform(region_df[["region"]])
+gender_df["gender"] = SimpleImputer(strategy="most_frequent").fit_transform(gender_df[["gender"]])
+
+cols = ["age", "bmi", "blood_pressure", "cholesterol", "glucose"]
+knn_df[cols]  = KNNImputer(n_neighbors=5).fit_transform(knn_df[cols])
+mice_df[cols] = IterativeImputer(random_state=42).fit_transform(mice_df[cols])
+```
 
 💡 KNN and MICE are the standout methods since they fix **multiple columns simultaneously** using multivariate relationships, unlike single-column Mean/Median/Mode.
 
@@ -152,8 +165,8 @@ missing_report = pd.DataFrame({
 
 **Q4. Winsorization**
 ```python
-from scipy.stats.mstats import winsorize
-winsor_df[col] = winsorize(winsor_df[col], limits=[0.01, 0.01])
+for col in ["cholesterol", "glucose"]:
+    winsor_df[col] = winsorize(winsor_df[col], limits=[0.01, 0.01])
 ```
 💡 Winsorization produces nearly identical statistics to percentile capping (cholesterol mean 207.70 → 207.71) while keeping **every one of the 500 rows intact** — the safest outlier treatment when sample size matters.
 
