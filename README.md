@@ -20,6 +20,9 @@ Clean the `patient_health_records_dataset.csv` file by identifying and imputing 
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-8B0000?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![SciPy](https://img.shields.io/badge/SciPy-1B5E20?style=for-the-badge&logo=scipy&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-8B0000?style=for-the-badge&logo=jupyter&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-1B5E20?style=for-the-badge&logo=anaconda&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-8B0000?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-1B5E20?style=for-the-badge&logo=github&logoColor=white)
 
 ---
 
