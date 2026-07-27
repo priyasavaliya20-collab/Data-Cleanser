@@ -8,7 +8,8 @@ The project combines classical statistical theory with practical implementation 
 
 ## 🎯 Objective
 
-Clean the `patient_health_records_dataset.csv` file by identifying and imputing missing values using the technique best suited to each column's distribution, detecting and treating outliers without unnecessarily discarding patient records, comparing every technique's trade-offs (data loss vs. statistical stability), and producing a final dataset with **0 missing values** and **0 flagged outliers**.
+<img width="1536" height="1024" alt="ChatGPT Image Jul 27, 2026, 05_16_56 PM" src="https://github.com/user-attachments/assets/ffd4c31a-5f96-43c1-baf1-69bd46aec34c" />
+
 
 ---
 
