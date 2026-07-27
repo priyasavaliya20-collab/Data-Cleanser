@@ -2,22 +2,6 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B0000,100:1B5E20&height=220&section=header&text=Data%20Cleanser&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Missing%20Value%20Imputation%20%2B%20Outlier%20Treatment%20on%20Patient%20Health%20Records&descAlignY=58&descSize=18"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-1B5E20?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Pandas-8B0000?style=for-the-badge&logo=pandas&logoColor=white"/>
-  <img src="https://img.shields.io/badge/NumPy-1B5E20?style=for-the-badge&logo=numpy&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Scikit--Learn-8B0000?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SciPy-1B5E20?style=for-the-badge&logo=scipy&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Jupyter-8B0000?style=for-the-badge&logo=jupyter&logoColor=white"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Completed-1B5E20?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Records-500-8B0000?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Missing%20Cells%20Fixed-250%20%E2%86%92%200-1B5E20?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Outliers%20Treated-62%20%E2%86%92%200-8B0000?style=flat-square"/>
-  <img src="https://img.shields.io/badge/License-MIT-1B5E20?style=flat-square"/>
-</p>
 
 This project presents a complete **Missing Value Imputation + Outlier Treatment** pipeline on a real-world **Patient Health Records** dataset containing 500 records. The objective is to detect and quantify data quality issues, compare multiple statistical treatment techniques against each other, and produce a fully clean, analysis-ready dataset suitable for disease-risk prediction.
 
@@ -37,7 +21,22 @@ To clean the `patient_health_records_dataset.csv` file by:
 
 ## 🛠️ Tools & Libraries
 
-`Python` · `Pandas` · `NumPy` · `Scikit-learn` (`SimpleImputer`, `KNNImputer`, `IterativeImputer`) · `SciPy` (`winsorize`) · `Jupyter Notebook`
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-1B5E20?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Pandas-8B0000?style=for-the-badge&logo=pandas&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NumPy-1B5E20?style=for-the-badge&logo=numpy&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Scikit--Learn-8B0000?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SciPy-1B5E20?style=for-the-badge&logo=scipy&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Jupyter-8B0000?style=for-the-badge&logo=jupyter&logoColor=white"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Completed-1B5E20?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Records-500-8B0000?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Missing%20Cells%20Fixed-250%20%E2%86%92%200-1B5E20?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Outliers%20Treated-62%20%E2%86%92%200-8B0000?style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-MIT-1B5E20?style=flat-square"/>
+</p>
 
 ---
 
