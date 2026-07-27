@@ -1,4 +1,160 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:1B0000,20:4A0000,40:8B0000,60:1B5E20,80:2E7D32,100:66BB6A&text=Data%20Cleanser&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Missing%20Value%20Imputation%20•%20Outlier%20Detection%20•%20Statistical%20Cleaning&descAlignY=66&descSize=18"/>
+<svg width="960" height="310" viewBox="0 0 960 310" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fcfcfc"/>
+    </linearGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d62828"/>
+      <stop offset="50%" stop-color="#8b5e34"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <!-- Pill Gradient -->
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="35%" stop-color="#dc2626"/>
+      <stop offset="55%" stop-color="#9a6a2f"/>
+      <stop offset="78%" stop-color="#4d9b38"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8"
+        flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+
+    <filter id="titleShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="3"
+        flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="310" rx="24" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="78" cy="56" r="48" fill="#ef4444" opacity="0.10"/>
+  <circle cx="882" cy="248" r="60" fill="#22c55e" opacity="0.10"/>
+
+  <!-- Left Check -->
+  <g transform="translate(30,125)">
+    <circle cx="30" cy="30" r="28" fill="none" stroke="#c62828" stroke-width="5"/>
+    <path d="M16 30 L28 43 L46 18"
+          fill="none"
+          stroke="#2e7d32"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Right Graph -->
+  <g transform="translate(845,118)">
+    <rect width="58" height="40" rx="6"
+          fill="#fafafa"
+          stroke="#d5d5d5"/>
+    <polyline points="10,30 22,18 34,24 44,12 50,16"
+              fill="none"
+              stroke="#2e7d32"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+  </g>
+
+  <!-- Title -->
+  <text x="480"
+        y="105"
+        text-anchor="middle"
+        font-size="56"
+        font-weight="800"
+        font-family="Segoe UI,Arial,sans-serif"
+        fill="url(#titleGrad)"
+        filter="url(#titleShadow)">
+      DATA CLEANSER
+  </text>
+
+  <!-- Divider -->
+  <line x1="185"
+        y1="126"
+        x2="775"
+        y2="126"
+        stroke="#d8d8d8"
+        stroke-width="2"/>
+
+  <!-- Gradient Pill -->
+  <rect x="180"
+        y="146"
+        width="600"
+        height="52"
+        rx="26"
+        fill="url(#pillGrad)"
+        filter="url(#shadow)"/>
+
+  <!-- Pill Text -->
+  <text x="480"
+        y="178"
+        text-anchor="middle"
+        font-size="15"
+        font-weight="600"
+        font-family="Segoe UI,Arial,sans-serif"
+        fill="#ffffff">
+      Missing Value Imputation • Outlier Detection • Statistical Cleaning
+  </text>
+
+  <!-- Bottom Items -->
+
+  <!-- Item 1 -->
+  <circle cx="225" cy="235" r="12" fill="#d32f2f"/>
+  <text x="225" y="239"
+        text-anchor="middle"
+        font-size="12"
+        fill="white"
+        font-family="Segoe UI">✓</text>
+
+  <text x="248"
+        y="241"
+        font-size="14"
+        font-family="Segoe UI"
+        fill="#222">
+      Data Quality
+  </text>
+
+  <!-- Item 2 -->
+  <circle cx="480" cy="235" r="12" fill="#2e7d32"/>
+  <text x="480" y="239"
+        text-anchor="middle"
+        font-size="12"
+        fill="white"
+        font-family="Segoe UI">🗑</text>
+
+  <text x="503"
+        y="241"
+        font-size="14"
+        font-family="Segoe UI"
+        fill="#222">
+      Machine Learning Ready
+  </text>
+
+  <!-- Item 3 -->
+  <circle cx="772" cy="235" r="12" fill="#d32f2f"/>
+  <text x="772" y="239"
+        text-anchor="middle"
+        font-size="11"
+        fill="white"
+        font-family="Segoe UI">★</text>
+
+  <text x="795"
+        y="241"
+        font-size="14"
+        font-family="Segoe UI"
+        fill="#222">
+      Clean Dataset
+  </text>
+
+</svg>
 
 This project presents a **Missing Value Imputation + Outlier Treatment** analysis on a real-world **Patient Health Records** dataset containing **500 patient records**. The objective is to diagnose every data-quality issue in the dataset, apply and compare multiple statistical treatment techniques against each other, and produce a fully clean, analysis-ready dataset for disease-risk prediction.
 
