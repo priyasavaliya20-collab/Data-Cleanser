@@ -1,98 +1,4 @@
-<svg width="960" height="310" viewBox="0 0 960 310" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Background -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"></stop>
-      <stop offset="100%" stop-color="#fcfcfc"></stop>
-    </linearGradient>
-
-    <!-- Title Gradient -->
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#d62828"></stop>
-      <stop offset="50%" stop-color="#8b5e34"></stop>
-      <stop offset="100%" stop-color="#2e7d32"></stop>
-    </linearGradient>
-
-    <!-- Pill Gradient -->
-    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ef4444"></stop>
-      <stop offset="35%" stop-color="#dc2626"></stop>
-      <stop offset="55%" stop-color="#9a6a2f"></stop>
-      <stop offset="78%" stop-color="#4d9b38"></stop>
-      <stop offset="100%" stop-color="#22c55e"></stop>
-    </linearGradient>
-
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.18"></feDropShadow>
-    </filter>
-
-    <filter id="titleShadow">
-      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.15"></feDropShadow>
-    </filter>
-  </defs>
-
-  <!-- Background -->
-  <rect width="960" height="310" rx="24" fill="url(#bg)"></rect>
-
-  <!-- Decorative circles -->
-  <circle cx="78" cy="56" r="48" fill="#ef4444" opacity="0.10"></circle>
-  <circle cx="882" cy="248" r="60" fill="#22c55e" opacity="0.10"></circle>
-
-  <!-- Left Check -->
-  <g transform="translate(30,125)">
-    <circle cx="30" cy="30" r="28" fill="none" stroke="#c62828" stroke-width="5"></circle>
-    <path d="M16 30 L28 43 L46 18" fill="none" stroke="#2e7d32" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
-  </g>
-
-  <!-- Right Graph -->
-  <g transform="translate(845,118)">
-    <rect width="58" height="40" rx="6" fill="#fafafa" stroke="#d5d5d5"></rect>
-    <polyline points="10,30 22,18 34,24 44,12 50,16" fill="none" stroke="#2e7d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline>
-  </g>
-
-  <!-- Title -->
-  <text x="480" y="105" text-anchor="middle" font-size="56" font-weight="800" font-family="Segoe UI,Arial,sans-serif" fill="url(#titleGrad)" filter="url(#titleShadow)">
-      DATA CLEANSER
-  </text>
-
-  <!-- Divider -->
-  <line x1="185" y1="126" x2="775" y2="126" stroke="#d8d8d8" stroke-width="2"></line>
-
-  <!-- Gradient Pill -->
-  <rect x="180" y="146" width="600" height="52" rx="26" fill="url(#pillGrad)" filter="url(#shadow)"></rect>
-
-  <!-- Pill Text -->
-  <text x="480" y="178" text-anchor="middle" font-size="15" font-weight="600" font-family="Segoe UI,Arial,sans-serif" fill="#ffffff">
-      Missing Value Imputation • Outlier Detection • Statistical Cleaning
-  </text>
-
-  <!-- Bottom Items -->
-
-  <!-- Item 1 -->
-  <circle cx="225" cy="235" r="12" fill="#d32f2f"></circle>
-  <text x="225" y="239" text-anchor="middle" font-size="12" fill="white" font-family="Segoe UI">✓</text>
-
-  <text x="248" y="241" font-size="14" font-family="Segoe UI" fill="#222">
-      Data Quality
-  </text>
-
-  <!-- Item 2 -->
-  <circle cx="480" cy="235" r="12" fill="#2e7d32"></circle>
-  <text x="480" y="239" text-anchor="middle" font-size="12" fill="white" font-family="Segoe UI">🗑</text>
-
-  <text x="503" y="241" font-size="14" font-family="Segoe UI" fill="#222">
-      Machine Learning Ready
-  </text>
-
-  <!-- Item 3 -->
-  <circle cx="772" cy="235" r="12" fill="#d32f2f"></circle>
-  <text x="772" y="239" text-anchor="middle" font-size="11" fill="white" font-family="Segoe UI">★</text>
-
-  <text x="795" y="241" font-size="14" font-family="Segoe UI" fill="#222">
-      Clean Dataset
-  </text>
-
-</svg>
+<img width="960" height="310" alt="download" src="https://github.com/user-attachments/assets/bd99d44b-2c5e-4316-b94d-aa4f286faf6b" />
 
 This project presents a **Missing Value Imputation + Outlier Treatment** analysis on a real-world **Patient Health Records** dataset containing **500 patient records**. The objective is to diagnose every data-quality issue in the dataset, apply and compare multiple statistical treatment techniques against each other, and produce a fully clean, analysis-ready dataset for disease-risk prediction.
 
@@ -103,7 +9,7 @@ The project combines classical statistical theory with practical implementation 
 ## 🎯 Objective
 
 <img width="1600 px" height="900 px" alt="ChatGPT Image Jul 27, 2026, 05_16_56 PM" src="https://github.com/user-attachments/assets/ffd4c31a-5f96-43c1-baf1-69bd46aec34c" />
-<img width="960" height="310" alt="download" src="https://github.com/user-attachments/assets/bd99d44b-2c5e-4316-b94d-aa4f286faf6b" />
+
 
 
 ---
