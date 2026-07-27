@@ -1,50 +1,32 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B0000,100:1B5E20&height=220&section=header&text=Data%20Cleanser&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Missing%20Value%20Imputation%20%2B%20Outlier%20Treatment%20on%20Patient%20Health%20Records&descAlignY=58&descSize=18"/>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:1B0000,20:4A0000,40:8B0000,60:1B5E20,80:2E7D32,100:66BB6A&text=Data%20Cleanser&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Missing%20Value%20Imputation%20•%20Outlier%20Detection%20•%20Statistical%20Cleaning&descAlignY=66&descSize=18"/>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-1B5E20?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Pandas-8B0000?style=for-the-badge&logo=pandas&logoColor=white"/>
-  <img src="https://img.shields.io/badge/NumPy-1B5E20?style=for-the-badge&logo=numpy&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Scikit--Learn-8B0000?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SciPy-1B5E20?style=for-the-badge&logo=scipy&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Jupyter-8B0000?style=for-the-badge&logo=jupyter&logoColor=white"/>
-</p>
+This project presents a **Missing Value Imputation + Outlier Treatment** analysis on a real-world **Patient Health Records** dataset containing **500 patient records**. The objective is to diagnose every data-quality issue in the dataset, apply and compare multiple statistical treatment techniques against each other, and produce a fully clean, analysis-ready dataset for disease-risk prediction.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Completed-1B5E20?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Records-500-8B0000?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Missing%20Cells%20Fixed-250%20%E2%86%92%200-1B5E20?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Outliers%20Treated-62%20%E2%86%92%200-8B0000?style=flat-square"/>
-  <img src="https://img.shields.io/badge/License-MIT-1B5E20?style=flat-square"/>
-</p>
-
-This project presents a complete **Missing Value Imputation + Outlier Treatment** pipeline on a real-world **Patient Health Records** dataset containing 500 records. The objective is to detect and quantify data quality issues, compare multiple statistical treatment techniques against each other, and produce a fully clean, analysis-ready dataset suitable for disease-risk prediction.
-
-The project combines classical statistical theory with hands-on implementation in Python (Jupyter Notebook), covering the complete cleaning workflow — from missing-value diagnosis and skewness-based imputation strategy to IQR/Z-score outlier detection and non-destructive capping.
+The project combines classical statistical theory with practical implementation in Python (Jupyter Notebook), covering the complete cleaning workflow — from missing-value diagnosis and skewness-based imputation to IQR/Z-score outlier detection and non-destructive capping.
 
 ---
 
 ## 🎯 Objective
 
-To clean the `patient_health_records_dataset.csv` file by:
-- Identifying and imputing missing values using the technique best suited to each column's distribution
-- Detecting and treating outliers without unnecessarily discarding patient records
-- Comparing every technique's trade-offs (data loss vs. statistical stability)
-- Producing a final dataset with **0 missing values** and **0 flagged outliers**
+Clean the `patient_health_records_dataset.csv` file by identifying and imputing missing values using the technique best suited to each column's distribution, detecting and treating outliers without unnecessarily discarding patient records, comparing every technique's trade-offs (data loss vs. statistical stability), and producing a final dataset with **0 missing values** and **0 flagged outliers**.
 
 ---
 
 ## 🛠️ Tools & Libraries
 
-`Python` · `Pandas` · `NumPy` · `Scikit-learn` (`SimpleImputer`, `KNNImputer`, `IterativeImputer`) · `SciPy` (`winsorize`) · `Jupyter Notebook`
+![Python](https://img.shields.io/badge/Python-1B5E20?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-8B0000?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-1B5E20?style=for-the-badge&logo=numpy&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-8B0000?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-1B5E20?style=for-the-badge&logo=scipy&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-8B0000?style=for-the-badge&logo=jupyter&logoColor=white)
 
 ---
 
 ## 🗂️ Project Files
 
 | File | Description |
-|---|---|
+|------|-------------|
 | 📓 `Data_Cleanser.ipynb` | Complete missing-value imputation & outlier treatment notebook |
 | 📊 `patient_health_records_dataset.csv` | Raw patient dataset — 500 records, 9 columns |
 | 📄 `Part_C_Theory_Report.pdf` | Data cleaning theory, diagrams & final report (9 pages) |
@@ -59,20 +41,20 @@ Raw Dataset (500 rows × 9 cols, 250 missing cells, 62 outliers)
      │
      ▼
 ┌─────────────────────────────────────────────────────────┐
-│  PART A — HANDLING MISSING VALUES                         │
-│  Mean / Median / Mode → Random Sample → KNN → MICE         │
+│  PART A — HANDLING MISSING VALUES                          │
+│  Mean / Median / Mode → Random Sample → KNN → MICE          │
 └─────────────────────────────────────────────────────────┘
      │
      ▼
 ┌─────────────────────────────────────────────────────────┐
-│  PART B — HANDLING OUTLIERS                                │
-│  Z-score → IQR → Percentile Capping → Winsorization         │
+│  PART B — HANDLING OUTLIERS                                 │
+│  Z-score → IQR → Percentile Capping → Winsorization          │
 └─────────────────────────────────────────────────────────┘
      │
      ▼
 ┌─────────────────────────────────────────────────────────┐
-│  PART C — FINAL CLEAN DATASET                               │
-│  0 missing · 0 outliers · 500 rows retained                 │
+│  PART C — FINAL CLEAN DATASET                                │
+│  0 missing · 0 outliers · 500 rows retained                   │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -81,7 +63,7 @@ Raw Dataset (500 rows × 9 cols, 250 missing cells, 62 outliers)
 ## 📊 Dataset
 
 | Property | Value |
-|---|---|
+|----------|-------|
 | Source | `patient_health_records_dataset.csv` |
 | Total records | 500 |
 | Columns | 9 — `patient_id`, `age`, `gender`, `region`, `bmi`, `blood_pressure`, `cholesterol`, `glucose`, `disease_risk` |
@@ -89,7 +71,7 @@ Raw Dataset (500 rows × 9 cols, 250 missing cells, 62 outliers)
 | Outliers detected (IQR) | 62 across `bmi`, `blood_pressure`, `cholesterol`, `glucose` |
 | Target concept | `disease_risk` (0 / 1) |
 
-**Missing values per column**
+### Missing Values Per Column
 
 | Column | Missing Count | % Missing | Skewness | Strategy Chosen |
 |---|---|---|---|---|
@@ -105,80 +87,174 @@ Raw Dataset (500 rows × 9 cols, 250 missing cells, 62 outliers)
 
 ## 🗺️ Project Roadmap
 
-### 🧩 Part A — Handling Missing Values
+```mermaid
+flowchart TD
+    A([📄 Raw Dataset — 500 rows × 9 cols]) --> B{{🔍 Data Diagnosis}}
+    B --> B1(Missing Value Scan)
+    B --> B2(Skewness Check)
+    B --> B3(IQR Outlier Scan)
 
-**Q1. Identify missing values & summary report**
+    B1 & B2 & B3 --> C[["🧩 Part A — Missing Value Imputation"]]
+
+    C --> C1(Simple Imputer — Mean / Median)
+    C --> C2(Simple Imputer — Mode)
+    C --> C3(Missing Indicator + Random Sample)
+    C --> C4(KNN Imputer)
+    C --> C5(MICE Algorithm)
+
+    C1 & C2 & C3 & C4 & C5 --> D{{📈 Part B — Outlier Treatment}}
+
+    D --> D1(Z-score Method)
+    D --> D2(IQR Method)
+    D --> D3(Percentile Capping)
+    D --> D4(Winsorization)
+
+    D1 & D2 & D3 & D4 --> E(["🏁 Part C — Final Clean Dataset"])
+    E --> F([💡 Insights & Conclusion])
+
+    classDef source fill:#E8F5E9,stroke:#1B5E20,stroke-width:2px,color:#0D3311,font-weight:bold;
+    classDef hub fill:#1B5E20,stroke:#0D3311,stroke-width:2px,color:#FFFFFF,font-weight:bold;
+    classDef process fill:#8B0000,stroke:#4A0000,stroke-width:2px,color:#FFFFFF,font-weight:bold;
+    classDef sub fill:#FDF3F3,stroke:#C97B7B,stroke-width:1.5px,color:#4A0000;
+    classDef output fill:#4A0000,stroke:#1B0000,stroke-width:2.5px,color:#FFFFFF,font-weight:bold;
+
+    class A source;
+    class B,D hub;
+    class C process;
+    class B1,B2,B3,C1,C2,C3,C4,C5,D1,D2,D3,D4 sub;
+    class E,F output;
+```
+
+---
+
+# 📕 Part A — Handling Missing Values
+
+---
+
+## 🔍 Q1. Identify Missing Values & Summary Report
+
 ```python
 missing_report = pd.DataFrame({
     "Missing Values": df.isnull().sum(),
     "Percentage (%)": round(df.isnull().mean() * 100, 2)
 })
 ```
-💡 `bmi` has the highest missing rate (10.2%), followed by `age` (10.0%) and `cholesterol` (8.2%) — no column exceeds ~10%, so imputation (not deletion) is the right call.
+💡 **Insight:** `bmi` has the highest missing rate (10.2%), followed by `age` (10.0%) and `cholesterol` (8.2%) — no column exceeds ~10%, so imputation (not deletion) is the right call.
 
-**Q2. Apply & compare imputation techniques**
+## 🛠️ Q2. Apply & Compare Imputation Techniques
 
-| Technique | Applied To | Result |
-|---|---|---|
-| Simple Imputer — Mean / Median | `bmi` | Mean = 27.09, Median = 26.7 — median preferred (mild right skew) |
-| Simple Imputer — Mode | `region` | Most frequent = "West", fills all 39 missing values |
-| Simple Imputer — Mode | `gender` | Most frequent = "Male", fills all 31 missing values |
-| Missing Indicator + Random Sample | `cholesterol` | Adds `cholesterol_missing` flag, then random-samples from existing values |
-| KNN Imputer (k=5) | `age`, `bmi`, `blood_pressure`, `cholesterol`, `glucose` | Resolves all 5 columns together using nearest-neighbor patterns |
-| MICE (Iterative Imputer) | Same 5 columns | Most statistically robust — models each column as a function of the others |
-
+**Simple Imputer (Mean / Median) — `bmi`**
 ```python
 mean_df, median_df = df.copy(), df.copy()
 mean_df["bmi"]   = SimpleImputer(strategy="mean").fit_transform(mean_df[["bmi"]])
 median_df["bmi"] = SimpleImputer(strategy="median").fit_transform(median_df[["bmi"]])
+```
+💡 **Insight:** Mean BMI (27.09) is slightly higher than Median BMI (26.7), indicating a mild right skew. Median is the safer imputation choice since it's less sensitive to outliers.
 
+**Simple Imputer (Mode) — `region`, `gender`**
+```python
 region_df["region"] = SimpleImputer(strategy="most_frequent").fit_transform(region_df[["region"]])
 gender_df["gender"] = SimpleImputer(strategy="most_frequent").fit_transform(gender_df[["gender"]])
+```
+💡 **Insight:** "West" is the most frequent region, "Male" is the most frequent gender — both fill their missing cells completely, assuming the missingness is random (MCAR).
 
+**Missing Indicator + Random Sample — `cholesterol`**
+```python
+random_df["cholesterol_missing"] = random_df["cholesterol"].isnull().astype(int)
+values = random_df["cholesterol"].dropna()
+mask = random_df["cholesterol"].isnull()
+random_df.loc[mask, "cholesterol"] = np.random.choice(values, mask.sum())
+```
+💡 **Insight:** The indicator column preserves *where* data was missing, while random sampling fills gaps without flattening the original distribution's variance — unlike mean/median.
+
+**KNN Imputer — multivariate**
+```python
 cols = ["age", "bmi", "blood_pressure", "cholesterol", "glucose"]
-knn_df[cols]  = KNNImputer(n_neighbors=5).fit_transform(knn_df[cols])
+knn_df[cols] = KNNImputer(n_neighbors=5).fit_transform(knn_df[cols])
+```
+💡 **Insight:** KNN resolves all 5 numeric columns together using patterns from the 5 nearest similar patients — more realistic than a single global mean/median.
+
+**MICE Algorithm — multivariate**
+```python
 mice_df[cols] = IterativeImputer(random_state=42).fit_transform(mice_df[cols])
 ```
+💡 **Insight:** MICE models each incomplete column as a function of the others across several iterations — the most statistically robust imputation method tested.
 
-💡 KNN and MICE are the standout methods since they fix **multiple columns simultaneously** using multivariate relationships, unlike single-column Mean/Median/Mode.
+## ⚖️ Comparison
+
+```python
+compare = pd.DataFrame({
+    "Original": df.isnull().sum(), "Mean": mean_df.isnull().sum(),
+    "Median": median_df.isnull().sum(), "Region": region_df.isnull().sum(),
+    "Gender": gender_df.isnull().sum(), "Random": random_df.isnull().sum(),
+    "KNN": knn_df.isnull().sum(), "MICE": mice_df.isnull().sum()
+})
+```
+💡 **Insight:** KNN and MICE are the clear winners — they resolve missing values across `age`, `bmi`, `cholesterol`, and `glucose` **simultaneously**, unlike single-column methods.
 
 ---
 
-### 📈 Part B — Handling Outliers
+# 📈 Part B — Handling Outliers
 
-**Q3. Detect & remove outliers**
+---
 
-| Method | Applied To | Original Shape | After Treatment | Data Lost |
-|---|---|---|---|---|
-| Z-score (\|z\| ≤ 3) | `cholesterol`, `glucose` | (500, 9) | (392, 9) | 21.6% |
-| IQR (1.5 × IQR rule) | `bmi` | (500, 9) | (439, 9) | 12.2% |
-| Percentile capping (1st–99th) | `cholesterol` | (500, 9) | (500, 9) | 0% — capped, not removed |
+## 🎯 Q3. Detect & Remove Outliers
 
-**IQR Bounds Applied**
+**Z-score Method — `cholesterol`, `glucose`**
+```python
+for col in ["cholesterol", "glucose"]:
+    z = (zscore_df[col] - zscore_df[col].mean()) / zscore_df[col].std()
+    zscore_df = zscore_df[z.abs() <= 3]
+```
+💡 **Insight:** Removed 108 rows (500 → 392, ≈21.6% dropped) — fairly aggressive, since Z-score treats each column independently and compounds row loss.
 
-| Column | Lower Bound | Upper Bound | Outliers Found |
-|---|---|---|---|
-| bmi | 12.5 | 40.7 | 10 |
-| blood_pressure | 72.5 | 170.8 | 10 |
-| cholesterol | 92.1 | 309.6 | 18 |
-| glucose | 25.1 | 212.8 | 24 |
+**IQR Method — `bmi`**
+```python
+Q1, Q3 = df["bmi"].quantile([0.25, 0.75])
+IQR = Q3 - Q1
+lower, upper = Q1 - 1.5 * IQR, Q3 + 1.5 * IQR
+iqr_df = df[df["bmi"].between(lower, upper)]
+```
+💡 **Insight:** Removed 61 rows (500 → 439, ≈12.2% dropped) — more moderate than Z-score, and doesn't assume normality, so it's more robust for skewed medical data.
 
-**Q4. Winsorization**
+**Percentile Capping — `cholesterol`**
+```python
+lower, upper = df["cholesterol"].quantile([0.01, 0.99])
+percentile_df["cholesterol"] = percentile_df["cholesterol"].clip(lower, upper)
+```
+💡 **Insight:** Pulls extreme values inward (max 497 → 454.25) **without deleting any rows** — mean and std barely shift, showing capping preserves sample size while taming extremes.
+
+## ✂️ Q4. Apply Winsorization
+
 ```python
 for col in ["cholesterol", "glucose"]:
     winsor_df[col] = winsorize(winsor_df[col], limits=[0.01, 0.01])
 ```
-💡 Winsorization produces nearly identical statistics to percentile capping (cholesterol mean 207.70 → 207.71) while keeping **every one of the 500 rows intact** — the safest outlier treatment when sample size matters.
+💡 **Insight:** Produces nearly identical statistics to percentile capping while keeping every one of the 500 rows intact — the safest outlier treatment when sample size matters.
 
-**Q5. Before vs. after comparison**
+## 🔄 Q5. Compare Dataset Shape & Summary — Before vs After
 
-💡 Removing IQR-flagged outliers shrinks the dataset by 12.2% and tightens spread across most numeric columns — confirming the core trade-off of this project: **removal boosts stability but costs data volume**, while **capping/winsorization achieves stability with zero data loss**.
+```python
+comparison = pd.concat(
+    [Original_df.describe(), iqr_df.describe()],
+    axis=1, keys=["Before", "After"]
+)
+```
+💡 **Insight:** Outlier *removal* (IQR) shrinks the dataset by 12.2% and tightens spread, confirming the core trade-off: removal boosts stability but costs data volume, while capping/winsorization achieves stability with **zero data loss**.
 
 ---
 
-### 🏁 Part C — Final Clean Dataset
+# 🏁 Part C — Final Clean Dataset
 
-**Q6. Present final cleaned dataset**
+---
+
+## ✅ Q6. Present Final Cleaned Dataset
+
+```python
+print("Final Cleaned Dataset — Shape:", df.shape)
+display(df.head())
+df.describe()
+```
 
 | Metric | Before | After |
 |---|---|---|
@@ -186,15 +262,15 @@ for col in ["cholesterol", "glucose"]:
 | Missing cells | 250 | 0 |
 | Outliers (IQR-flagged) | 62 | 0 |
 
-Final approach: **skewness-based imputation** (Mean for symmetric `age`, Median for skewed `bmi`/`cholesterol`/`glucose`, Mode for categorical `gender`/`region`) combined with **IQR-based capping (Winsorization)** for outliers.
+💡 **Final approach:** skewness-based imputation (Mean for symmetric `age`, Median for skewed `bmi`/`cholesterol`/`glucose`, Mode for categorical `gender`/`region`) combined with IQR-based capping (Winsorization) for outliers.
 
 ---
 
 ## 📋 Brief Report Summary
 
-- **Best imputation strategy:** Median for skewed numeric columns (`bmi`, `cholesterol`, `glucose`), Mean for the near-symmetric `age` column, Mode for categorical columns — validated further by KNN/MICE as the most robust multivariate options.
+- **Best imputation strategy:** Median for skewed numeric columns, Mean for the near-symmetric `age` column, Mode for categorical columns — validated further by KNN/MICE as the most robust multivariate options.
 - **Best outlier strategy:** IQR-based capping (Winsorization) over outright removal — removal would have discarded 62 records (12.4%), many of which represent genuinely high-risk patients relevant to `disease_risk` prediction.
-- **Outcome:** A complete, stable, and analysis-ready dataset of 500 records with 0 missing values and 0 extreme outliers, suitable for downstream EDA, hypothesis testing, or machine learning.
+- **Outcome:** A complete, stable, analysis-ready dataset of 500 records with 0 missing values and 0 extreme outliers.
 
 ---
 
@@ -229,8 +305,8 @@ Data_Cleanser.ipynb
 - [x] Winsorization
 - [x] Compare dataset shape & summary before/after outlier treatment
 - [x] Present final cleaned dataset
-- [x] Notebook included
-- [x] Dataset included
+- [x] Notebook Included
+- [x] Dataset Included
 
 ---
 
@@ -241,8 +317,4 @@ Data_Cleanser.ipynb
 
 *"Data-Driven Decisions · Statistical Thinking · Evidence-Based Conclusions"*
 
-<p align="center">⭐ If you found this project helpful, give it a star and feel free to fork!</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1B5E20,100:8B0000&height=100&section=footer"/>
-</p>
+⭐ If you found this project helpful, give it a star and feel free to fork!
