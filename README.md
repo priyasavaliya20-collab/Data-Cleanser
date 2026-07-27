@@ -8,7 +8,7 @@ The project combines classical statistical theory with practical implementation 
 
 ## 🎯 Objective
 
-<img width="1536" height="1024" alt="ChatGPT Image Jul 27, 2026, 05_16_56 PM" src="https://github.com/user-attachments/assets/ffd4c31a-5f96-43c1-baf1-69bd46aec34c" />
+<img width="1600 px" height="900 px" alt="ChatGPT Image Jul 27, 2026, 05_16_56 PM" src="https://github.com/user-attachments/assets/ffd4c31a-5f96-43c1-baf1-69bd46aec34c" />
 
 
 ---
